@@ -77,5 +77,13 @@ public int hashCode(){
 }
 //5. A toString() method that returns the artist and title information in
 // a well-formatted manner
+    /**
+     * returns string format of a song object using an artist and a title
+     * @return string of song object
+     */
+    @Override
+    public String toString() {
+        return "Song{" + "artist=" + artist + ", title=" + title + '}';
+    }
 
 }
