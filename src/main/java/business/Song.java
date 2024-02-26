@@ -32,6 +32,38 @@ private String title;
         this.title = title;
     }
 //3. Getter and setter methods for the artist and title.
+    /**
+     * Returns the artist of song
+     * @return The name of the artist
+     */
+    public String getArtist() {
+        return artist;
+    }
+
+    /**
+     * Returns the title of song
+     * @return The name of the title
+     */
+    public String getTitle() {
+        return title;
+    }
+
+    //setters
+    /**
+     * Sets the artist of the song to the name of the artist
+     * @param artist
+     */
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+
+    /**
+     * Sets the title of the song to the title name
+     * @param title
+     */
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
 //4. An equals() method and a hashCode() method – these should base their
 // calculation on the artist and title fields.
