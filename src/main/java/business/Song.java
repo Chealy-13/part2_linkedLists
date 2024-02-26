@@ -1,5 +1,7 @@
 package business;
 
+import java.util.Objects;
+
 /**
  *
  * @author michelle
@@ -67,7 +69,12 @@ private String title;
 
 //4. An equals() method and a hashCode() method – these should base their
 // calculation on the artist and title fields.
-
+public int hashCode(){
+        int hash = 7;
+        hash = 41 * hash * Objects.hashCode(this.artist);
+        hash = 41 * hash * Objects.hashCode(this.title);
+        return hash;
+}
 //5. A toString() method that returns the artist and title information in
 // a well-formatted manner
 
