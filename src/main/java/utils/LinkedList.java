@@ -9,6 +9,7 @@ import business.Song;
 public class LinkedList {
 private Node head;
 private Node tail;
+private int numElements;
 
 protected static class Node{
     //do i need this class and getters and setters, are we not already doing this in the song class?
@@ -35,6 +36,13 @@ protected static class Node{
         return this.data;
     }
 }
-
+//1. A method called size() that takes no parameters & returns the number of Songs currently stored in your list.
+    /**
+     * Returns the num of songs currently in the list
+     * @return size of the list
+     */
+public int size(){
+    return numElements;
+}
 
 }
