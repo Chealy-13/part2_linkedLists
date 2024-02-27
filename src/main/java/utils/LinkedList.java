@@ -44,5 +44,25 @@ protected static class Node{
 public int size(){
     return numElements;
 }
+//2. A method called get() that takes one parameter, an int representing the position from which data should be
+//    retrieved. The position should be validated and invalid positions handled accordingly.
+//    If the position is valid, the method should return the data (a Song) in the position specified.
+    /**
+     * Returns song at specific position in list
+     * @param pos of song to returned
+     * @return song/element at position
+     * @throws IndexOutOfBoundsException if the index is out of range i.e below 0 or too big for list size
+     */
+    public Song get(int pos) {
+        if (pos < 0 || pos >= numElements) {
+            throw new IndexOutOfBoundsException("Index out of bounds: " + pos);
+        } else {
+            Node current = head;
+            for (int i = 0; i < pos; i++) {
+                current = current.next;
+            }
+            return current.data;
+        }
+    }
 
 }
