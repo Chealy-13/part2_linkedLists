@@ -66,6 +66,26 @@ public class LinkedList {
         return -1;
     }
 
+//4. A method called add() that takes a single parameter,
+// a Song to be added to the end of the list.
+    /**
+     * Adds new song to end of the list
+     * @param song to be added
+     * @return true if song added
+     */
+    public boolean add(Song song) {
+        Node newNode = new Node(song);
+        if (tail == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        numElements++;
+        return true;
+    }
+
     protected static class Node {
         //do i need this class and getters and setters, are we not already doing this in the song class?
         private Song data;
