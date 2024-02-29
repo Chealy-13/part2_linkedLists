@@ -97,6 +97,18 @@ public class LinkedList {
         return numElements == 0;
     }
 
+//6. A method called tail() that takes no parameters.
+// This should return the last element in the list.
+    /**
+     * returns last element in the list
+     * @return last element in the list or null if list is empty
+     */
+    public Song tail() {
+        if (tail == null) {
+            return null;
+        }
+        return tail.data;
+    }
 
     protected static class Node {
         //do i need this class and getters and setters, are we not already doing this in the song class?
