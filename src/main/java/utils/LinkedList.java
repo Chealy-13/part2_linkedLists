@@ -86,6 +86,18 @@ public class LinkedList {
         return true;
     }
 
+//5.A method called isEmpty() that takes no parameters.
+//This should return a boolean indicating if there is data
+//currently stored in the list
+    /**
+     * returns true or false depending on if list is empty or not
+     * @return true if list empty, false otherwise
+     */
+    public boolean isEmpty() {
+        return numElements == 0;
+    }
+
+
     protected static class Node {
         //do i need this class and getters and setters, are we not already doing this in the song class?
         private Song data;
