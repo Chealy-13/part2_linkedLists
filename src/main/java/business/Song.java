@@ -86,4 +86,25 @@ public int hashCode(){
         return "Song{" + "artist=" + artist + ", title=" + title + '}';
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if(getClass() != obj.getClass()) {
+            return false;
+        }
+        final Song other = (Song) obj;
+        if (!Objects.equals(this.title, other.title)){
+            return false;
+        }
+        if (!Objects.equals(this.artist, other.artist)){
+            return false;
+        }
+        return true;
+    }
 }
+

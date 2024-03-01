@@ -110,6 +110,20 @@ public class LinkedList {
         return tail.data;
     }
 
+//random gen Q1
+//Your linkedlist should be implemented as a bounded list, i.e. limited in size.
+//You should include the appropriate method or methods to facilitate this,
+//and the logic of your class should uphold this requirement throughout.
+
+
+//random gen q2
+//Your list should contain a method called addAll() that takes one parameter:
+//    An array of Songs to be added.
+//    All values from this array should be added to the list (nulls included)
+//    as long as the logic of your list is upheld.
+//    The method should return nothing.
+
+
     protected static class Node {
         //do i need this class and getters and setters, are we not already doing this in the song class?
         private Song data;
