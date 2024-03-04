@@ -6,6 +6,8 @@ import java.util.Objects;
  *
  * @author michelle
  */
+//LINK FOR GITHUB
+//https://github.com/Chealy-13/part2_linkedLists.git
 public class Song {
 //Implement a class named Song. A Song is made up of two String fields:
 //an artist and a title.
