@@ -77,7 +77,7 @@ public class LinkedList {
     /**
      * Adds new song to end of the list
      * @param song to be added
-     * @return true if song added
+     * @return true if song added and false if list is full
      */
     public boolean add(Song song) {
         if (numElements >= MAX_SIZE){
@@ -127,10 +127,12 @@ public class LinkedList {
 //    All values from this array should be added to the list (nulls included)
 //    as long as the logic of your list is upheld.
 //    The method should return nothing.
-
-
+    public void addAll(Song[] songs) {
+        for (Song song : songs) {
+            add(song);
+        }
+    }
     protected static class Node {
-        //do i need this class and getters and setters, are we not already doing this in the song class?
         private Song data;
         private Node next;
 
