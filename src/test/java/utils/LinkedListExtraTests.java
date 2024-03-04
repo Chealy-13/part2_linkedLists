@@ -38,6 +38,25 @@ public class LinkedListExtraTests {
         assertEquals(1, mySongs.size());
     }
 
+    @Test
+    public void testAddToEndOfListIsTail(){
+        LinkedList mySongs = new LinkedList();
+        //add songs to list
+        mySongs.add(new Song("artist 1", "song 1"));
+        mySongs.add(new Song("artist 2", "song 2"));
+        mySongs.add(new Song("artist 3", "song 3"));
+
+        //add new song hoping to be at the end of list
+        Song newSong = new Song("artist 4", "song 4");
+        mySongs.add(newSong);
+
+        //get tail/last song in the list
+        Song lastSong = mySongs.tail();
+
+        //check it is the last song
+        assertEquals(newSong, lastSong);
+
+    }
 
     public LinkedListExtraTests() {
 
