@@ -9,7 +9,7 @@ public class LinkedList {
     private Node head;
     private Node tail;
     private int numElements;
-
+    private static final int MAX_SIZE = 10;
 
 //1. A method called size() that takes no parameters & returns the number of Songs currently stored in your list.
 
@@ -68,12 +68,21 @@ public class LinkedList {
 
 //4. A method called add() that takes a single parameter,
 // a Song to be added to the end of the list.
+
+//+ random gen Q1
+//Your linkedlist should be implemented as a bounded list, i.e. limited in size.
+//You should include the appropriate method or methods to facilitate this,
+//and the logic of your class should uphold this requirement throughout.
+
     /**
      * Adds new song to end of the list
      * @param song to be added
      * @return true if song added
      */
     public boolean add(Song song) {
+        if (numElements >= MAX_SIZE){
+            return false;//if the list is already full then do not add new song
+        }
         Node newNode = new Node(song);
         if (tail == null) {
             head = newNode;
@@ -110,10 +119,6 @@ public class LinkedList {
         return tail.data;
     }
 
-//random gen Q1
-//Your linkedlist should be implemented as a bounded list, i.e. limited in size.
-//You should include the appropriate method or methods to facilitate this,
-//and the logic of your class should uphold this requirement throughout.
 
 
 //random gen q2
